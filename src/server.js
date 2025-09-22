@@ -29,8 +29,6 @@ app.use(
   })
 );
 
-);
-
 startCronJob();
 
 app.get('/', (req, res) => res.json({ success: true, msg: 'Server ishlayapti ✅' }));

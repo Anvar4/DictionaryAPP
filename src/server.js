@@ -19,15 +19,12 @@ app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
 app.use(
   cors({
-    origin: [
-      'http://localhost:5173', 
-      'http://localhost:5174',
-      'https://dictionaryapp-frontend.onrender.com'
-    ],
+    origin: "*",
     methods: ['GET', 'POST', 'PUT', 'DELETE', 'PATCH'],
-    credentials: true,
+    credentials: false, 
   })
 );
+
 
 startCronJob();
 
